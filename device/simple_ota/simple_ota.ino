@@ -31,7 +31,7 @@ void ota(String vers){
     WiFiClient client;
     ESPhttpUpdate.setLedPin(LED_BUILTIN, LOW);
 
-    t_httpUpdate_return ret = ESPhttpUpdate.update(client, "http://35.234.200.103:5000/ota/" + vers);
+    t_httpUpdate_return ret = ESPhttpUpdate.update(client, "http://{your-server-ip}/ota/" + vers);
     
     switch (ret) {
       case HTTP_UPDATE_FAILED:
